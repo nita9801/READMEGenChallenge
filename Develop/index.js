@@ -70,18 +70,6 @@ const questions = [
     },
 ];
 
-const data = {
-  title: "My Project",
-  Description: "This is a description.",
-  installation: "Run `npm install`.",
-  Usage: "Run `node app.js`.",
-  license: "MIT",
-  Credits: "John Doe, Jane Smith",
-  Tests: "Run `npm test`.",
-  email: "example@example.com",
-  Github: "https://github.com/example"
-};
-
 const markdownContent = generateMarkdown(data);
 
 console.log(markdownContent);
