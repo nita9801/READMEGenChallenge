@@ -30,7 +30,7 @@
 
 Clone the repository: 
 
-    git clone https://github.com/nita9801/ReadmeGenNodesChallenge.git
+    git clone https://github.com/nita9801/READMEGenChallenge.gitg
 
 Navigate to the project directory:
     cd ReadmeGenNodesChallenge
