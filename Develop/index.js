@@ -3,7 +3,7 @@ import inquirer from "inquirer";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from 'url';
-import { generateMarkdown } from './generateMarkdown.js';
+import generateMarkdown from './generateMarkdown.js';
 
 // setup_dirname for Es modules
 
@@ -30,7 +30,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: ' installation',
+        name: 'installation',
         message: 'What are the steps required to install your project?',
     },
     {

@@ -7,14 +7,15 @@ function renderLicenseBadge(license) {
     } else if(license === 'GPL 3.0') {
       return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'; 
     } else{
-      return ''; 
+      return '' 
       // If there is no license, return an empty string
     }
-      // Function to generate markdown for README
+  }   // Function to generate markdown for README
    
 function generateMarkdown(data) {
     return` 
       # ${data.title} 
+      ${renderLicenseBadge(data.License)}
 
         ## Table of Contents
          1. [Description](#description)
@@ -40,5 +41,5 @@ function generateMarkdown(data) {
         ## Questions
            For any questions, please reach out to me at ${data.email} or visit my GitHub profile: ${data.Github}`
      };
- }
+ 
 export default generateMarkdown;
