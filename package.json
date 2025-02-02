@@ -14,8 +14,5 @@
     "fs": "^0.0.1-security",
     "inquirer": "^12.4.1",
     "path": "^0.12.7"
-  },
-  "dependencies": {
-    "transcript": "^0.0.6"
   }
 }
