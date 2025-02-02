@@ -14,7 +14,7 @@ function renderLicenseBadge(license) {
    
 function generateMarkdown(data) {
     return` 
-      # ${data.title} 
+      # ${data.Title} 
       ${renderLicenseBadge(data.License)}
         ## Table of Contents
         ${data.TableofContents}
