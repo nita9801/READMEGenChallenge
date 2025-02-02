@@ -70,8 +70,12 @@ const questions = [
         name: 'Github',
         message: 'what is your Github Profile',
     },
+    {
+        type: 'input',
+        name: 'filePath',
+        message: 'Enter the path of the asset file you want to copy (if any):',
+    },
 ];
-console.log (data); // added to check data before error occurs
 
 const markdownContent = generateMarkdown(data);
 console.log(markdownContent);
