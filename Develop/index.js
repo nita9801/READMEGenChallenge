@@ -76,19 +76,18 @@ const questions = [
         message: 'Enter the path of the asset file you want to copy (if any):',
     },
 ];
-
-const markdownContent = generateMarkdown(data);
-console.log(markdownContent);
  // Create a function to initialize app
     
  function init() {
     inquirer.prompt(questions).then((answers) => {
         const content = generateMarkdown(answers);
         console.log(`Selected License: ${answers.license}`);
+
         // Writing content into the README file
         fs.writeFile('README.md', content, (err) =>
             err ? console.error("Error creating README.md:", err) : console.log("README.md created!")
         );
+        
     // Handle asset file
         const filePath = answers.filePath;
         const assetsDir = path.join(__dirname, "assets");
