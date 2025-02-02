@@ -71,6 +71,7 @@ const questions = [
         message: 'what is your Github Profile',
     },
 ];
+console.log (data); // added to check data before error occurs
 
 const markdownContent = generateMarkdown(data);
 console.log(markdownContent);
