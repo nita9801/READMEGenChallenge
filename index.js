@@ -3,7 +3,7 @@ import inquirer from "inquirer";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from 'url';
-import generateMarkdown from './generateMarkdown.js';
+import {generateMarkdown} from './generateMarkdown.js';
 
 // setup_dirname for Es modules
 
