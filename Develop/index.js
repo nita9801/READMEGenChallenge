@@ -11,6 +11,12 @@ import generateMarkdown from './generateMarkdown.js';
         const __dirname = path.dirname(__filename);
 
 // inquirer is collecting input for the README by asking target specific questions,
+const licenses = [
+    'MIT',
+    'Apache 2.0',
+    'GPL 3.0',
+    'None'
+];
 
 const questions = [
     {
@@ -39,19 +45,15 @@ const questions = [
         message: 'provide instructions and examples for use',
     },
     {
-        type: 'input',
-        name: 'filePath',
-        message: 'Please enter the path of the asset file you want to submit:',
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your project:',
+        choices: licenses,
     },
-    {
+    {   
         type: 'input',
-        name: 'License',
-        message: 'Please provide all if any liceses associated with the project:',
-    },
-    {   type: 'input',
         name: 'Credits',
         message: 'List your Collaborators, if any, with links to their GitHub profiles.'
-
     },
     {
         type: 'input',
@@ -78,7 +80,7 @@ console.log(markdownContent);
  function init() {
     inquirer.prompt(questions).then((answers) => {
         const content = generateMarkdown(answers);
-        
+        console.log(`Selected License: ${answers.license}`);
         // Writing content into the README file
         fs.writeFile('README.md', content, (err) =>
             err ? console.error("Error creating README.md:", err) : console.log("README.md created!")
