@@ -73,7 +73,6 @@ const questions = [
 ];
 
 const markdownContent = generateMarkdown(data);
-
 console.log(markdownContent);
  // Create a function to initialize app
     
