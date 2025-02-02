@@ -1,5 +1,4 @@
 // a function that returns a license badge based on which license is passed in
-export default generateMarkdown;
 function renderLicenseBadge(license) {
     if (license === 'MIT') {
       return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';''
@@ -42,3 +41,4 @@ function generateMarkdown(data) {
            For any questions, please reach out to me at ${data.email} or visit my GitHub profile: ${data.Github}`
      };
  }
+export default generateMarkdown;
