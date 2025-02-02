@@ -61,7 +61,7 @@ Install the dependencies:
 
 ## License
 
-    This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+    MIT
 
 ## Credits
  
@@ -71,10 +71,11 @@ Install the dependencies:
 ## Tests
 
  Video example of the generator in action
+ [Watch the video here](<iframe src="https://drive.google.com/file/d/1tQGYyKQM7686rDAwpGnZnXzB4aw7rxzP/preview" width="640" height="480"></iframe>)
 
 Navigating to examples in directory 
-    cd ReadmeGenNodesChallenge\Develop\READMEexample.md
-    
+    cd Develop\READMEtest1.md    
+    cd Develop\READMEtest2.md
 ## Contact 
 
-If you have any questions or feedback, feel free to reach out at nit**01@ example.comgit pu
+If you have any questions or feedback, feel free to reach out at nit**01@ example
