@@ -2,13 +2,8 @@
 import inquirer from "inquirer";
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from 'url';
+
 import generateMarkdown from './generateMarkdown.js';
-
-// setup_dirname for Es modules
-
-        const __filename = fileURLToPath(import.meta.url);
-        const __dirname = path.dirname(__filename);
 
 const questions = [
     {
@@ -75,17 +70,15 @@ const questions = [
 ];
      
     //  a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => 
-        err ? console.error(err) : console.log('README.md was created successfully!')
-    );
-};
+    function writeToFile(fileName, data) {
+        return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+      }
 
 //  a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((answers) => {
-        const markdown = generateMarkdown(answers);
-        writeToFile("README.md", markdown)
+    inquirer.prompt(questions).then((inquirerResponses) => {
+      console.log('Generating README...');
+      writeToFile('README.md', generateMarkdown({ ...inquirerResponses }));
     });
  }
 
