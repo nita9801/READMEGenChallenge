@@ -1,37 +1,77 @@
-// a function that returns a license badge based on which license is passed in
+// a function to create the License badge
+
 function renderLicenseBadge(license) {
-    if (license === 'MIT') {
-      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';''
-    } else if (license === 'Apache 2.0') {
-      return '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
-    } else if(license === 'GPL 3.0') {
-      return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'; 
-    } else{
-      return '' 
-      // If there is no license, return an empty string
-    }
-  }   // Function to generate markdown for README
-   
+  if (!license || license === 'None'){
+    return '';
+  } 
+  return `![License](https://img.shields.io/badge/License-${license.replace(' ', '%20')}-blue.svg)`
+}
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
+  if (license === 'None') return '';
+  return `- [License](#license)`
+}
+// Function to generate markdown for README
+function renderLicenseSection(license) {
+  if (license === 'None');
+  return `## License
+  
+  This project is licensed under the ${license} license.`
+}
 function generateMarkdown(data) {
-    return` 
-      # ${data.Title} 
+  return `# ${data.Title}
+
       ${renderLicenseBadge(data.License)}
-        ## Table of Contents
-        ${data.TableofContents}
-        ## Description
+       ## Description
           ${data.Description}
+      
+       ## Table of Contents
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [Technologies](#technologies)
+        - [Screenshots](#screenshots)
+        - [Walkthrough Video](#walkthrough-video)
+        - [URL Link](#url-link)
+        - [Contributing](#contributing)
+        - [Contributors](#contributors)
+        - [Tests](#tests)
+        ${renderLicenseLink(data.license)}
+        -[Questions](#questions)
+
         ## Installation
-          ${data.installation}
+        ${data.installation}
+
         ## Usage
-          ${data.Usage}
-        ## License
-        This project is licensed under the ${data.license} License.
-        ## Credits
-          ${data.Credits}      
+        ${data.usage}
+
+        ## Technologies
+        ${data.technologies}
+
+        ## Screenshots
+        ${data.screenshots}
+  
+        ## Walkthrough Video
+        ${data.video}
+
+        ## URL Link
+        ${data.link}
+  
+        ## Contributing
+        ${data.contributing}
+
+        ## Contributors
+        ${data.contributors}
+
         ## Tests
-          ${data.Tests}
+        ${data.tests}
+
+        ${renderLicenseSection(data.license)}
+
         ## Questions
-           For any questions, please reach out to me at ${data.email} or visit my GitHub profile: ${data.Github}`
-     };
- 
-export default generateMarkdown;
+        If you have any additonal questions, you can contact me at:
+        - GitHub: [${data.github}](https://github.com/${data.github})
+        - Email: [${data.email}](mailto:${data.email})
+      `;
+    }
+
+    export default generateMarkdown;
