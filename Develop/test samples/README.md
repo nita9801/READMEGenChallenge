@@ -1,55 +1,46 @@
-# ReadMe Generator Challenge
+# redeme
 
+![GitHub license](https://img.shields.io/badge/license-Apache_2.0-blue.svg)
+
+## Description
+creates a readme
       
-       ## Description
-          provide a Readme after answering a sequense of questions this alows the developer more time to work on the project.
-      
-       ## Table of Contents
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [Technologies](#technologies)
-        - [Screenshots](#screenshots)
-        - [Walkthrough Video](#walkthrough-video)
-        - [URL Link](#url-link)
-        - [Contributing](#contributing)
-        - [Contributors](#contributors)
-        - [Tests](#tests)
-        - [License](#license)
-        -[Questions](#questions)
+## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Technologies](#technologies)
+  - [Screenshots](#screenshots)
+  - [Walkthrough Video](#walkthrough-video)
+  - [Contributing](#contributing)
+  - [Contributors](#contributors)
+  - [Tests](#tests)
+  -[Questions](#questions)
 
-        ## Installation
-        undefined
+## Installation
+undefined
 
-        ## Usage
-        undefined
+## Usage
+undefined
+## License
+This project is licensed under the Apache 2.0 license.
 
-        ## Technologies
-        Node.js, path, fs, inquierer
+## Technologies
+node.js, path, fs, inquierer
 
-        ## Screenshots
-        
+## Screenshots
+READMEGenChallenge\Develop\assets\Screenshot 2025-05-08 093928.png
   
-        ## Walkthrough Video
-        
-
-        ## URL Link
-        
+## Walkthrough Video
+READMEGenChallenge\Develop\assets\demo.webm
   
-        ## Contributing
-        clone, fork and have at it. I am always looking for improvement
+## Contributing
+fork the repo on github
 
-        ## Contributors
-        Christine L 
+## Tests
+npm install and node index.js to terminal to run 
 
-        ## Tests
-        npm install for the dependencies and node index.js to run the application 
-
-        ## License
+## Questions
+  If you have any additonal questions, you can contact me at:
+- GitHub: [nita9801](https://github.com/nita9801)
+- Email: [nita9801@gmail.com](mailto:nita9801@gmail.com)
   
-  This project is licensed under the MIT license.
-
-        ## Questions
-        If you have any additonal questions, you can contact me at:
-        - GitHub: [nita9801](https://github.com/nita9801)
-        - Email: [nita9801@gmail.com](mailto:nita9801@gmail.com)
-      
